@@ -1,0 +1,39 @@
+header.main-header
+    a(href='/').logo
+        span.logo-mini
+            <b>MRp A</b>
+        span.logo-lg
+            <b>MRp Admin</b>
+    nav(role='navigation').navbar.navbar-static-top
+        a(href='#', role='button', data-toggle='offcanvas').sidebar-toggle
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div.navbar-custom-menu
+            ul.nav.navbar-nav
+                    li.dropdown.user.user-menu
+                        a(href='#',data-toggle='dropdown').dropdown-toggle
+                            img(src="/adminlte/dist/img/mrp160x160.jpg", alt='User Image').user-image
+                            span.hidden-xs
+                                | Admin MRp
+                        ul.dropdown-menu
+                            li.user-header
+                                img(src="/adminlte/dist/img/mrp160x160.jpg", alt='User Image').user-image
+                                p
+                                    | Admin MRp
+                            li.user-body
+                                .row
+                                    .col-xs-6.text-center
+                                        a(href='https://mamanracing.weebly.com/')
+                                            | Website
+                                    .col-xs-6.text-center
+                                        a(href='https://www.facebook.com/mamanracingproduction')
+                                            | Fanspage
+                            li.user-footer
+                                .pull-left
+                                    a(href='http://localhost:3000/profil').btn.btn-default.btn-flat
+                                        | Profil
+                                .pull-right
+                                    a(href='/logout').btn.btn-default.btn-flat
+                                        | Keluar

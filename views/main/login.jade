@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		title
+			| #{title}
+		meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+		link(rel='stylesheet', href='/adminlte/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/font-awesome/css/font-awesome.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')
+		link(rel='stylesheet', href='/adminlte/dist/css/AdminLTE.min.css')
+		link(rel='stylesheet', href='/adminlte/plugins/iCheck/square/blue.css')
+	body.hold-transition.login-page(style="background: url('adminlte/dist/img/login.png'); background-attachment:fixed;")
+		.login-box
+			.login-logo
+				
+					b
+						| Admin
+					img(src='/images/logo.png', alt="", style='width:30%;')
+			.login-box-body(style="background-color: #ffffff40; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border-radius: 8%;")
+				p.login-box-msg(style="margin-bottom: 15px; margin-top: 25px;")
+					
+				form(action="/login/",method="post")
+					- if (messages.msg_error) 
+						.alert.alert-danger.alert-dismissable 
+							button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+								| ×
+							h4
+								i.icon.fa.fa-ban
+								| STOP! 
+							| !{messages.msg_error}
+					.form-group.has-feedback
+						input(type="email",placeholder="Email",name="txtEmail").form-control
+					
+					.form-group.has-feedback
+						input(type="password",placeholder="Password",name="txtPassword").form-control
+						
+					.row
+						.col-xs-12
+							button(type="submit").btn.btn-primary.btn-block.btn-flat
+								| Sign In
+				.social-auth-links.text-center
+					
+
+script(type='text/javascript', src='/adminlte/plugins/jQuery/jquery-2.2.3.min.js')
+script(type='text/javascript', src='/adminlte/bootstrap/js/bootstrap.min.js')
+script(type='text/javascript', src='/adminlte/plugins/iCheck/icheck.min.js')
+script(type='text/javascript', src='/adminlte/dist/js/login.js')
