@@ -47,7 +47,7 @@ app.use(
         database:process.env.MYSQLDATABASE // your database name
     },'pool') //or single
 );
-app.use('/', index);
+app.use('/login', main/login);
 app.use('/customers', customers);
 app.use('/users', users);
 // catch 404 and forward to error handler
