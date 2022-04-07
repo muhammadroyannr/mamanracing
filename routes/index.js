@@ -4,8 +4,8 @@ var modul = require('../modul/modul');
 
 var session_store;
 /* GET home page. */
-router.get('/', function(req, res, next) {
-res.render('index', { title: 'Express' });
+router.get('/login', function(req, res, next) {
+res.render('main/login', { title: 'Express' });
 });
 router.get('/dashboard', function(req, res, next) {
 res.render('dashboard', { title: 'Express' });
