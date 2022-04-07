@@ -11,7 +11,7 @@ var customers = require('./routes/customers');
 var expressValidator = require('express-validator');
 var methodOverride = require('method-override');
 var connection = require('express-myconnection');
-var mysql = require('mysql');
+var mysql = require('mysql2');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
